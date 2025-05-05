@@ -19,7 +19,6 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: Output event name and repo
       - run: |
           echo "The job was triggered by event {{ github.event_name }}"
           echo "The branch is {{ github.branch }} and the repository is {{ github.repository }}"
