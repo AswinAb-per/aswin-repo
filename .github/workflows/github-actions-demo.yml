@@ -21,13 +21,13 @@ jobs:
     steps:
       - name: Output event name and repo
       - run: |
-           echo "The job was triggered by event {{ github.event_name }}"
-           echo "The branch is {{ github.branch }} and the repository is {{ github.repository }}"
+          echo "The job was triggered by event {{ github.event_name }}"
+          echo "The branch is {{ github.branch }} and the repository is {{ github.repository }}"
 
       - uses: actions/checkout@v3.3.0
       
       - name: List files in the repository
-      - run:
+      - run: |
           echo "The files under the repository {{ github.repository }}"
           tree
     
